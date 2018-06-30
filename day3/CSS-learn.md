@@ -240,3 +240,31 @@ CSS的值的类型有很多，常见的有，具体参考[【MDN】](https://dev
 
 CSS框模型是网页布局的基础，每一个元素被表示为一个矩形的方框，框的内容、内边距、边界和外边距像洋葱一样，一层包一层的构建起来。具体查看[【MDN】](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model)
 
+### 样式化文本
+
+文本样式的基础包括设置字体、粗细、斜体、行还有字符间距、阴影以及其他特征。
+
+#### 基本的文本以及字体样式
+
+用于样式文本的CSS属性通常可以简单分为以下两类，具体参照[【MDN】](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/%E4%B8%BA%E6%96%87%E6%9C%AC%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F/Fundamentals)：
+- 字体样式
+- 文本布局风格
+
+#### 样式化列表
+
+基本与正常文本字体格式化差不多，主要有个列表特定样式，具体参照[【MDN】](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/%E4%B8%BA%E6%96%87%E6%9C%AC%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F/Styling_lists)
+
+#### 样式化链接
+
+链接主要涉及一个状态的概念，具体查看[【MDN】](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/%E4%B8%BA%E6%96%87%E6%9C%AC%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F/Styling_links)
+- Link：没有访问过的，这是链接的默认状态，可以使用伪类`:link`应用样式
+- Visted：这个链接已经被访问过了（存在浏览器的历史记录中），可以使用伪类`:visited`应用样式
+- Hover:当用户鼠标停留在这个链接，使用`:hover`应用
+- Focus:当链接被选中的时候，使用`:focus`应用
+- Active: 当一个链接被激活的时候，如点击操作，使用`:active`应用
+
+#### 网络字体
+
+可以使用网络字体（即可以在指定访问时随网站一起瞎子啊字体文件，这样就是可以使用任何web字体），具体查看[【MDN】](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/%E4%B8%BA%E6%96%87%E6%9C%AC%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F/Web_%E5%AD%97%E4%BD%93)
+
+### 格式化区块
