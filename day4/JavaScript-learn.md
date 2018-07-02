@@ -1,0 +1,1 @@
+**简介：** 学习前端知识，JavaScript的学习肯定是必不可少的，目前按照百度前端学院的推荐，依然从[【MDN】](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)上的教程开始学起。
