@@ -268,3 +268,14 @@ CSS框模型是网页布局的基础，每一个元素被表示为一个矩形�
 可以使用网络字体（即可以在指定访问时随网站一起瞎子啊字体文件，这样就是可以使用任何web字体），具体查看[【MDN】](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/%E4%B8%BA%E6%96%87%E6%9C%AC%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F/Web_%E5%AD%97%E4%BD%93)
 
 ### 格式化区块
+
+主要包括背景、边界、样式化表格、以及高级区块效果。具体参照[【MDN】](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_boxes)
+
+### CSS排版设置
+
+主要包括浮动、定位等，具体参照[【MDN】](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout)
+
+
+### 结束语
+
+暂时先这样，这个完全没用，就是在我阅读的时候做一下笔记。现在就是大概了解下，用的时候再做更深入的学习
