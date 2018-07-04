@@ -14,7 +14,7 @@ fuction greetMe(user){
 greetMe('arvon')
 ```
 
-### Chapter1
+### Chapter1：基础
 
 几点语言特性
 - 区分大小写，使用Unicode字符集
@@ -27,4 +27,54 @@ JavaScript有三种声明方式
 - const：声明一个块作用域的只读的命名变量
 
 
+JavaScript数据结构和类型
+- Boolean：布尔值，`true | false`
+- null: 一个声明`null`值的特殊关键字，注意是区分大小写的
+- undefined：变量未定义时的属性
+- Number：数字
+- String：字符串
+- Symbol：一种数据类型，它的实例时唯一且不可改变的
+- Object对象
+
+由于JavaScript是动态类型语言，所以声明变量时不必指定数据类型，数据类型会在脚本执行的时候根据需要自动转换。
+
+**字面量（Literals）：** 字面量是由语法表达式定义的常量；或者通过由一定字词组成的语词表达式定义的常量。在JavaScript中可以使用各种字面量，这些字面量是脚本中按字面意思给出的固定的值，而不是变量。常见的字面量如下
+- 数组字面量（Array literals）
+- 布尔字面量（Boolean literals）
+- 浮点数字面量（Floating-point literals）
+- 整数（Integers）
+- 对象字面量（Object literals）
+- RegExp literals
+- 字符串字面量（String literals）
+
+### Chapter2:流程控制
+
+JavaScript提供一套灵活的语句集，特别是控制流语句，可以使用这个控制语句在应用程序中实现大量的交互功能。
+
+语句块由一对大括号进行分割，常用的流程控制有`if/for/while`等
+
+```javascript
+var x = 1;
+
+{
+  let x = 2;  //结果输出1
+  //var x = 2; //结果输出2
+}
+alert(x);
+```
+
+条件判断语句如：
+```javascript
+var x =1;
+if (x > 2) {
+  console.log(x + ">2");
+}
+else if (x < 2) {
+  console.log(x + "<2");
+ }
+else{
+  console.log(x +"is equal 2");
+ }
+ //推荐使用严格的语句块模式，语句else可选
+```
 
