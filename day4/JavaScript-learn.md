@@ -78,3 +78,91 @@ else{
  //推荐使用严格的语句块模式，语句else可选
 ```
 
+switch语句:允许程序求一个表达式的值并且尝试去匹配表达式的值到一个`case`标签，匹配成功就执行变迁下相关指令。
+
+```javascript
+var input = 'orange';
+
+switch (input){
+  case "apple":
+    console.log("is apple ");
+    break;
+  case "banana":
+    console.log("is banana");
+    break;
+  case "orange":
+    console.log("is orange");
+    break;
+  default:
+    console.log("other food");
+    
+}
+```
+
+### Chapter3：异常处理
+
+可以使用`throw`抛出异常并使用`try .. catch`进行捕获。
+推荐使用以下异常类型,参照[【MDN】](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- `ECMAScript exceptions`
+- `DoMException` and `DOMError`
+
+简单例子
+```JavaScript
+function f(){
+  try {
+    console.log(0);
+    throw "bogus";
+  }  
+  catch(e){
+    console.log(1);
+    alert(e);
+    return true;
+  }
+  finally {
+    console.log('Eng');
+  }
+
+}
+f()
+```
+
+关于`Promises`：从ECMAScript 6开始支持，允许对延时和异步操作流进行控制。`Promoises`的几种状态如下：
+- pending：初始化状态，正在执行
+- fulfilled：成功的完成了操作
+- rejected：失败，没有完成操作
+- settled：处于fulfilled或rejected任意一个状态
+
+
+### ChapterX：通过XHR加载图片
+
+没试出来，不过也贴下来
+```javascript
+function imgLoad(url) {
+  return new Promise(function(resolve, reject) {
+    var request = new XMLHttpRequest();
+    request.open('GET', url);
+    console.log(url);
+    request.responseType = 'blob';
+    request.onload = function() {
+      if (request.status === 200) {
+        resolve(request.response);
+      } else {
+        reject(Error('Image didn\'t load successfully; error code:' 
+                     + request.statusText));
+      }
+    };
+    request.onerror = function() {
+      reject(Error('There was a network error.'));
+    };
+    request.send();
+  });
+}
+
+imgLoad('http://oqfz9mxmq.bkt.clouddn.com/20180413-gitlab-1.jpeg');
+```
+
+### Chapter4: 循环和迭代
+
+
+
+### Chapter5:
