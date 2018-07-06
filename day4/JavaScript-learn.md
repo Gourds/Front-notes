@@ -163,6 +163,70 @@ imgLoad('http://oqfz9mxmq.bkt.clouddn.com/20180413-gitlab-1.jpeg');
 
 ### Chapter4: 循环和迭代
 
+包括以下几种
+- `for`
+- `do...while`
+- `while`
+- `labeled`
+- `break`
+- `continue`
+- `for...in`
+- `for...of`
+
+**Ex1:** for 语句简单例子
+
+```javascript
+var step;
+//for ([initialExpression]; [condition]; [incrementExpression])
+for (step =0; step < 5; step++) {
+  console.log('Walking' + step);
+}
+```
+
+**Ex2:** do while语句
+
+```javascript
+let abc = 0;
+do{
+  abc += 1;
+  console.log('is' + abc);
+}while (abc < 5);
+```
+
+**Ex3:** while 语句
+
+```javascript
+var a = 0;
+var b = 0;
+
+while (a < 3){
+  b++;
+  a += b;
+  c = a + b;
+  console.log(a + '+' + b + '=' + c );
+}
+```
+
+**Ex4:** break语句
+
+需要注意的是`lable`标签，当break退出不带`lable`的循环时，会跳出整个循环，而使用带`lable`的进行退出，只会退出指定标记的语句。
+```javascript
+var a='arvon'
+
+for (i=0; i< a.length; i++){
+  console.log('hello' + i)
+  labelTest:
+  if (a[i] == 'v'){
+    console.log('Now' + i)
+    break labelTest;
+    //break;
+  }
+}
+```
+
+**Ex5：** continue语句
+
+continue语句可以用来继续执行下一个循环跟break类似，也可以指定`lable`进行匹配执行
 
 
 ### Chapter5:
