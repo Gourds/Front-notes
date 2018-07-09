@@ -301,7 +301,34 @@ result(); //输出100
 
 还是不大理解，参照[【阮一峰的Blog】](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
 
-### Chapter6:
+**使用arguments对象：** 可以给函数加参数
+
+```javascript
+function cece(myvar){
+  var result = '';
+  var i;
+  for (i =1; i < arguments.length; i++){
+    result += arguments[i] + myvar;
+  }
+  return console.log(result);
+}
+
+
+cece('aaa', 'bbb', 'ccc') //结果bbbaaacccaaa
+```
+
+**默认参数和剩余参数及箭头函数：** 看例子
+
+```javascript
+function multiply(a, b = 1) {
+  return a*b;
+}
+
+multiply(5); // 5
+
+```
+
+### Chapter6: 
 
 
 
