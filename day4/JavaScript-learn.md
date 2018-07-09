@@ -227,6 +227,82 @@ for (i=0; i< a.length; i++){
 **Ex5：** continue语句
 
 continue语句可以用来继续执行下一个循环跟break类似，也可以指定`lable`进行匹配执行
+```javascript
+var a = 0;
+var b = 0;
+while (a < 5){
+  a++;
+  if (a == 3){
+    continue;
+  }
+  console.log(a);
+}
+```
+
+**Ex6:** for...in语句
+
+```javascript
+
+function hahaha(obj, obj_name){
+  var result = "";
+  for (var i in obj){
+    result += obj_name + "." + i + "=" + obj[i] + "<br>";
+  }
+  result += "<hr>";
+  return result;
+}
+console.log(hahaha('hello', 'world'));
+```
+
+**Ex7：**for..of语句
+
+在可迭代的对象上创建了一个循环
+```javascript
+let arr = [3, 5, 7];
+arr.foo = "hello";
+
+for (let i in arr) {
+   console.log(i); // logs "0", "1", "2", "foo"
+}
+
+for (let i of arr) {
+   console.log(i); // logs "3", "5", "7" // 注意这里没有 hello
+}
+```
+
+### Chapter5: 定义函数
+
+函数定义由一系列`function`关键字组成（函数的名称、函数的参数列表、函数的javascript语句），如
+```javascript
+function cheng(haha){
+  console.log(haha + " * " + haha + " = " + haha * haha)
+}
+
+cheng(3) //结果 3 * 3 = 9
+```
+
+**闭包：**简单理解，闭包就是能够读取其他函数内部变量的函数。由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成"定义在一个函数内部的函数"。闭包的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。
+```javascript
+function f1(){
+  var n = 99;
+  njia = function(){n+=1}
+  function f2(){
+    alert(n);
+  }
+  return f2;
+}
+
+var result=f1();
+
+result(); // 输出99
+njia();
+result(); //输出100
+```
+
+还是不大理解，参照[【阮一峰的Blog】](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
+
+### Chapter6:
 
 
-### Chapter5:
+
+### Chapter7:
