@@ -325,11 +325,103 @@ function multiply(a, b = 1) {
 }
 
 multiply(5); // 5
-
 ```
 
-### Chapter6: 
+**箭头函数**
 
+```javascript
+var a = [
+ "arvon",
+  "and",
+  "mo"
+];
+var a2 = a.map(function(s){ return s.length });
+console.log(a2); // logs [ 8, 6, 7, 9 ]
+var a3 = a.map( s => s.length );
+console.log(a3); // logs [ 8, 6, 7, 9 ]
+```
+
+### Chapter6: 表达式和运算符
+
+具体参照[【MDN】](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators),这里只写一些学习的例子。
+
+```javascript
+​​​var a = 2
+var b = 6
+var count_type = [
+  a + b,
+  a - b,
+  a * b,
+  a / b,
+  a ** b,
+]
+function test(){
+  for (i of count_type){
+    console.log(i);
+  }
+}
+test()
+```
+
+**解构：** 对于更复杂的赋值，解构赋值语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。
+
+```javascript
+var foo = ["hi", "arvon", "mo", "hahah"];
+
+/*
+//不使用解构
+var one = foo[0];
+var two = foo[1];
+var three = foo[2];
+*/
+//使用解构
+var [one, two, three] = foo;
+console.log(one, two, three);
+```
+
+**比较运算符：** 
+
+```javascript
+var a = 1;
+var aa = "1";
+var b = 2;
+var bb = "2";
+
+console.log(a > b); //false
+console.log(bb > a); //true
+console.log(a != aa); //false
+console.log(a == aa); //true
+console.log(a === aa); //false
+console.log(a !== aa);  //true
+```
+
+**位运算符：** 用于直接对二进制位进行计算，会将操作数转化为由0和1组成的32bit的整数。具体可以看[【这里】](http://javascript.ruanyifeng.com/grammar/operator.html#toc19)
+
+**移位运算符：** 参照上面的链接吧，感觉不会很常用，暂时粗略看下，不深入学习。
+
+**逻辑运算符：** 
+
+```javascript
+var a = 2 >1 && 'a' != 'b';
+var b = 2 < 1 || 'a' == 'b';
+var c = ! 2 < 1
+console.log(a); //true
+console.log(b); //false
+console.log(c); //true
+```
+
+**条件运算符：**
+
+```javascript
+// 条件 ？ value1 ： value2；
+function haha(age){
+  var status = (age >= 18) ? "adult" : "child";
+  console.log(status);
+}
+
+haha('17'); //child
+haha('27'); //adult
+```
 
 
 ### Chapter7:
