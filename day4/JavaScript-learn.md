@@ -423,5 +423,35 @@ haha('17'); //child
 haha('27'); //adult
 ```
 
+**逗号操作符：**
 
-### Chapter7:
+逗号操作符对两个操作数进行求值并返回最终操作数的值，常用在for循环中，在每次循环时对多个变量进行更新。
+
+```javascript
+var a = [1, 2, 3, 4, 5];
+var b = ['a', 'b', 'c'];
+
+for (var i = 0, j = 6; i <= j; i++, j--){
+  console.log(i, j, a[i]);
+}
+```
+
+**一元操作符：**
+
+一元操作符仅对应一个操作数
+- `delete`
+- `typeof`
+- `void`
+
+**关系操作符：**
+
+关系操作符对操作数进行比较，根据比较结果返回相应的布尔值
+- `in`：判断指定属性是否属于指定对象
+- `instanceof`:判断对象类型
+
+**运算符优先级：**
+
+具体参考[【JavaScript 参考手册】](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Operators/Operator_Precedence#Table)
+
+### Chapter7: 表达式
+
