@@ -455,3 +455,28 @@ for (var i = 0, j = 6; i <= j; i++, j--){
 
 ### Chapter7: 表达式
 
+表达式是一组代码的集合，它返回一个值。每一个合法的表达式都可以计算成某个值。Javascript有以下几种表达式类型
+- 算数
+- 字符串
+- 逻辑值
+- 基本表达式
+- 左值表达式
+
+#### 基本表达式
+
+**this** 关键字被用于指代当前的对象
+```html
+<p>Enter a number between 18 and 99:</p>
+<input type="text" name="age" size=3 onChange="validate(this, 18, 99);">
+```
+
+```javascript
+function validate(obj, lowval, hival){
+  if ((obj.value < lowval) || (obj.value > hival))
+    console.log("Invalid Value!");
+}
+```
+
+### 数字和日期
+
+具体参照[【这里】](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)
