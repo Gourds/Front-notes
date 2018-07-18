@@ -480,3 +480,41 @@ function validate(obj, lowval, hival){
 ### 数字和日期
 
 具体参照[【这里】](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)
+
+#### 数字对象
+
+数字主要有以下几种：
+- 十进制数字：可以以0开头但是接着的数如果小于8这个数字会被识别为8进制
+- 二进制数字：以`0b`or`0B`开头
+- 八进制数字：
+- 十六进制：以`0x`or`0X`开头
+
+内置的Number对象有一些关于数字的常量属性，如最大值、不是一个数字和无穷大等，不能改变这些属性，但可以按以下方式使用
+```javascript
+var biggestNum = Number.MAX_VALUE;
+var smallestNum = Number.MIN_VALUE;
+var infiniteNum = Number.POSITIVE_INFINITY;
+var negInfiniteNum = Number.NEGATIVE_INFINITY;
+var notANum = Number.NaN;
+```
+
+#### 日期对象
+
+```javascript
+var dateObjectName = new Date();
+console.log(dateObjectName); //Date 2018-07-18T09:38:29.884Z
+```
+
+### 字符串
+
+除非必要，不然应该尽量使用String字面量，因为String对象的某些行为与直觉上并不一致，如
+```javascript
+var s1 = "2" + "2";
+var s2 = new String("2" + "2");
+
+console.log(s1); //22
+console.log(s2); // String { "22" }
+```
+
+### 国际化
+
