@@ -575,3 +575,47 @@ var myArray = myRe.exec("cdbbdbsbz");
 console.log(myArray); //Array [ "dbbd", "bb" ]
 ```
 
+### 数组对象（Array object）
+
+数组（Array）是一个有序的数据集合，可以通过数组名称和索引进行访问。具体参照[【文档】](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+
+```javascript
+var create_array1 = new Array('a1', 'a2', 'a3');
+var create_array2 = Array('b1', 'b2', 'b3');
+var create_array3 = ['c1', 'c2', 'c3'];
+
+console.log(create_array1); //Array(3) [ "a1", "a2", "a3" ]
+console.log(create_array2[1]); // b2
+console.log(create_array3);
+```
+
+### 映射
+
+
+[【具体参照】](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Keyed_Collections)
+**Map对象** ：一个map对象就是一个简单的键值对映射集合，可以按照数据插入时候的顺序遍历所有的元素。
+
+```javascript
+var test = new Map();
+test.set('arovn', 'me');
+test.set('mo', 'you');
+test.set('dog', 'haha');
+console.log(test.size); //3
+for (var [key, value] of test){
+  console.log(key + '===' + value);
+  /*
+  arovn===me 
+  mo===you 
+  dog===haha
+  */
+}
+test.clear();
+console.log(test.size); //0
+```
+
+**Object和Map的比较：** 
+- Object的键必须是String，在Map里键可以为任意类型
+- 只能手动获取Object的长度，Map的长度可以轻松获得
+- Map的遍历会按照元素的插入顺序
+- Object有原型有一些缺省的值（map=Object.create(null))
+
