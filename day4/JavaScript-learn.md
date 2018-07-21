@@ -619,3 +619,46 @@ console.log(test.size); //0
 - Map的遍历会按照元素的插入顺序
 - Object有原型有一些缺省的值（map=Object.create(null))
 
+如何选择Map或者Object：
+- 如果键在运行时才知道或者键值类型相同，那就使用map
+- 如果要将原始值存储为键，就使用map
+- 如果要对个别元素进行操作，就使用object
+
+**WeakMap** 对象也是键值对的集合，不过键必须是对象类型，值可以是任意类型，它的键被弱保持，即当它的键对象没有被其他地方引用时它会被GC回收掉，Weakmap和Map提供的接口相同。
+
+### 集合
+
+**Set对象**是一组值的集合，这些值都是不重复的，可以按照添加的顺序进行遍历。
+
+```javascript
+var mSet = new Set();
+mSet.add(1);
+mSet.add('b');
+mSet.add(3);
+//manage
+console.log(mSet.has(3)); //true
+mSet.delete(3);
+console.log(mSet.has(3)); //false
+console.log(mSet.size); //2
+//loop
+for (let item of mSet) console.log(item); //1 b
+//transition to array
+Array.from(mSet);
+console.log(Array.from(mSet)); //Array [ 1, "b" ]
+//Transition to set
+console.log(new Set([1, 1, 2, 2, 3])) //Set(3) [ 1, 2, 3 ]
+```
+
+Array和Set的对比
+- 数组在判断元素是否存在使用`indexOf`函数时效率低下
+- `Set`对象允许根据值删除元素，在数组中必须使用下标的方式
+- 数组中的`indexOf`方法没法找到`NaN`值
+- `Set`对象存储不重复的值，在某些处理上有优势
+
+### 对象（Objects）
+
+JavaScript的设计是一个简单的基于对象的范式。一个对象就是一系列属性的集合，一个属性包含一个名字和一个值（可以是函数）。具体参照[【[文档】](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)And[【看看这个】](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+
+
+
+暂时就先这样了，这个基础学习告一段落，发现目前的效率不是很高，还是需要在实践中逐渐学习深入，目前就做大概了解。以后有需要的话再进行之后高阶的学习。这个笔记基本就是照着教程敲了一遍，不具备学习参考价值。
